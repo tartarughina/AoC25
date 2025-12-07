@@ -4,18 +4,19 @@ use std::{
     path::PathBuf,
 };
 
+use aoc25::read_input;
+
 /// https://adventofcode.com/2025/day/1
 fn main() -> std::io::Result<()> {
     println!("Day 1 challenge");
 
-    let file = File::open(
+    let lines: Lines<BufReader<File>> = read_input(
         PathBuf::from(env!("CARGO_MANIFEST_DIR"))
             .join("inputs")
             .join("day-1")
             .join("input"),
-    )?;
-
-    let lines: Lines<BufReader<File>> = BufReader::new(file).lines();
+    )?
+    .lines();
 
     let mut pos: i32 = 50;
     let mut part1: u32 = 0;
