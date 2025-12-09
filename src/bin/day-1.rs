@@ -10,13 +10,8 @@ use aoc25::read_input;
 fn main() -> std::io::Result<()> {
     println!("Day 1 challenge");
 
-    let lines: Lines<BufReader<File>> = read_input(
-        PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("inputs")
-            .join("day-1")
-            .join("input"),
-    )?
-    .lines();
+    let lines: Lines<BufReader<File>> =
+        read_input(PathBuf::from("inputs").join("day-1").join("input"))?.lines();
 
     let mut pos: i32 = 50;
     let mut part1: u32 = 0;

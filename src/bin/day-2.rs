@@ -64,12 +64,7 @@ fn repeated_sequence(num: u64, digits: u64) -> u64 {
 
 ///  https://adventofcode.com/2025/day/2
 fn main() -> Result<()> {
-    let mut input = read_input(
-        PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .join("inputs")
-            .join("day-2")
-            .join("input.txt"),
-    )?;
+    let mut input = read_input(PathBuf::from("inputs").join("day-2").join("input.txt"))?;
 
     let mut line = String::from("");
     let _ = input.read_line(&mut line);
